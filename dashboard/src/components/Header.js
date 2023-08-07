@@ -1,7 +1,7 @@
 // Header.js
 
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MainContext } from '../mainContext';
 
 const Header = (props) => {
@@ -50,11 +50,11 @@ const Header = (props) => {
         <nav className={`md:flex ${isMenuOpen ? 'hidden' : 'hidden'} mt-4 md:mt-0 md:space-x-4`}>
           {/* Add your navigation links here */}
           <a href="/" className="block text-white">Home</a>
-           {mainContext.loggedInUser && <a href={ '/chat' } className="block text-white">Chat</a>}
-            {mainContext.loggedInUser && <a href={ '/profile' } className="block text-white">Profile</a>}
-          { isAdmin && <a href={ '/questions' } className="block text-white">Questions</a>}
+           {mainContext.loggedInUser && <Link to="/chat" className="block text-white">Chat</Link>}
+            {mainContext.loggedInUser && <Link to="/profile" className="block text-white">Profile</Link>}
+          { isAdmin && <Link to="/about" className="block text-white">Questions</Link>}
           
-          {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <a href="/login" className="block text-white">Login</a>}
+          {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <Link to="/about" className="block text-white">Login</Link>}
           
         </nav>
         {/* Side Drawer */}
@@ -62,10 +62,10 @@ const Header = (props) => {
           <nav className="mt-4 space-y-4">
             {/* Add your navigation links here */}
             <a href="/" className="block text-white">Home</a>
-            {mainContext.loggedInUser && <a href={ '/chat' } className="block text-white">Chat</a>}
-            {mainContext.loggedInUser && <a href={ '/profile' } className="block text-white">Profile</a>}
-            { !isAdmin && <a href={ '/questions' } className="block text-white">Questions</a>}
-            {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <a href="/login" className="block text-white">Login</a>}
+            {mainContext.loggedInUser && <Link to="/chat" className="block text-white">Chat</Link>}
+            {mainContext.loggedInUser && <Link to="/profile" className="block text-white">Profile</Link>}
+            { !isAdmin && <Link to="/questions" className="block text-white">Questions</Link>}
+            {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <Link to="/login" className="block text-white">Login</Link>}
           </nav>
         </div>
       </div>
