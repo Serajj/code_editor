@@ -1,5 +1,5 @@
 
-# Online coding platform
+# Online coding platform (Task for DBM)
 
 An online platform where you're able to practise coding and solve many different kinds of coding problems.
 
@@ -62,7 +62,7 @@ Run the server
   nodemon index.js
 ```
 
-```Note : For create admin account , first signup as a noral user then navigate to mongodb collection and change role to admin.```
+```Note : To create admin account , first signup as a noral user then navigate to mongodb collection and change role to admin.```
 
 ### Frontend dashboard setup
 
