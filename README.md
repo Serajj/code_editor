@@ -41,6 +41,12 @@ JWT_SECRET
 
 SPHERE_SECRET
 SPHERE_ENDPOINT
+
+SMTP_HOST
+SMTP_PORT
+SMTP_USER
+SMTP_PASS
+
 ```
 Sphere engine documentation : https://docs.sphere-engine.com/index
 
