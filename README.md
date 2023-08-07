@@ -84,28 +84,79 @@ Start the server
 ```
 ## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- Role base authentication , admin/participants
+- User can login/regster
+- Admin can add coding problems.
+- Admin can add test cases to a problem
+- User can write code and submit.
+- User email verification
 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<h3> Authentication Screens </h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/signup.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/send_verification_error.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/resend_verification_screen.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/verification_email.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+</div>
+<h3> User Screens </h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/user_dashboard.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/user_question.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/code_editor.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
 
+<h3> Admin Screens </h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/admin_dashboard.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/admin_userlist_with_pagination.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/admin_questions.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/admin_add_question.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/admin_edit_question.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/signup.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/admin_view_question.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/admin_add_testcases.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/delete_question.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
+
+<h3> Profile Screens </h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/profile.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/edit_progile.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+</div>
+
+<h3> Chat Screens (Single and Group) </h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/chat_screen.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/start_chat.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/working_chat.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
+
+<h3> Code Editor Screens (Integrated with Sphere engine API )</h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <img src="screenshots/code_editor.png" alt="Screenshot 1" width="300" style="margin: 10px;">
+    <img src="screenshots/editor_with_error.png" alt="Screenshot 2" width="300" style="margin: 10px;">
+    <img src="screenshots/editor_success.png" alt="Screenshot 3" width="300" style="margin: 10px;">
+</div>
 
 ## Demo
 
-Insert gif or link to demo
-
+Will available soon
 
 ## 🚀 About Me
 I'm a full stack developer...
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://seraj.swiftcoder.in/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.linkedin.com/in/serajj)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/serajj)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
