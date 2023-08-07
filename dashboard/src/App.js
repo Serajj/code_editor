@@ -16,6 +16,14 @@ import CodeEditor from './components/editor/CodeEditor';
 import QuestionForm from './components/admin/QuestionForm';
 import SingleQuestionDetail from './components/admin/SingleQuestionDetail';
 import Loader from './components/loader/Loader';
+import ChatView from './components/chat/chatView';
+import Test from './components/Test';
+import ProfilePage from './components/ProfilePage';
+import firebase from 'firebase/app';
+import 'firebase/firestore'; // Import any additional Firebase services you want to use
+import ImageUpload from './components/tools/ImageUpload';
+import EmailVerification from './components/EmailVerification';
+
 
 function App() {
     //we can use redux also for authentication but here I am using custom method
@@ -42,6 +50,10 @@ function App() {
                 <Route path="/admin/view_question/:id" element={<SingleQuestionDetail  />} />
                 <Route path="/admin/edit_question/:id" element = {<QuestionForm/>} />
                 <Route path="/code" element={<CodeEditor  />} />
+                <Route path="/chat" element={<ChatView  />} />
+                <Route path="/test" element={<ImageUpload  />} />
+                <Route path="/profile" element={<ProfilePage/>} />
+                <Route path="/resend_verification" element={<EmailVerification/>}/>
             </Routes>
         </BrowserRouter>
         <ToastContainer position="top-right" autoClose={3000} />

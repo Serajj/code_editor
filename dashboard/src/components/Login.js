@@ -15,8 +15,11 @@ const Login = () => {
 
   const navigation = useNavigate();
   useEffect(() => {
-  
-  }, [mainContext,navigation]);
+    const token = localStorage.getItem('authenticated_token');
+    if(token){
+      navigation('/');
+    }
+  }, []);
 
   const fields = loginFields;
   let fieldsState = {};
@@ -24,7 +27,7 @@ const Login = () => {
   fields.forEach((field) => (fieldsState[field.id] = ""));
 
   const [loginState, setLoginState] = useState(fieldsState);
-
+const [isUnverified, setisUnverified] = useState(false);
   const handleChange = (e) => {
     setLoginState({ ...loginState, [e.target.id]: e.target.value });
   };
@@ -107,15 +110,33 @@ const Login = () => {
         });
       }
 
+      if(response.data.code === 401){
+        setisUnverified(true);
+      }
+
       }
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong , try again in sometime", {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
     
 
 
    
   };
+
+  const handleSendVerification = async()=>{
+    console.log("Sending verification mail..");
+    navigation('/resend_verification');
+  }
 
   return (
     <>
@@ -128,6 +149,10 @@ const Login = () => {
      <div className="login-form-wrapper flex justify-center">
       <form className="mt-8 space-y-6">
         <div className="-space-y-px">
+       { isUnverified && <div className="flex p-4 items-center justify-between">
+          <a href="#" onClick={handleSendVerification} className="font-medium text-purple-600 hover:text-purple-500"> Click here  </a> <span className="ml-2">to resend verification link.</span>
+        </div>
+}
           {fields.map((field) => (
             <Input
               key={field.id}

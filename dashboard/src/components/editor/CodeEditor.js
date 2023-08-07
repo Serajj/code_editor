@@ -28,6 +28,7 @@ const CodeEditor = () => {
   const [inputStream, setinputStream] = useState(null);
   const [outputStream, setoutputStream] = useState(null);
   const [errorStream, seterrorStream] = useState(null);
+  const [isError, setisError] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("authenticated_token");
@@ -121,8 +122,10 @@ const CodeEditor = () => {
                 console.log(data.result.streams.output);
                 setoutputStream(data.result.streams.output.uri);
                 setinputStream(data.result.streams.input.uri);
+                setisError(false);
             }else{
               //error occured
+              setisError(true);
               console.log("Error occured : " + data.result.status.code === 15);
               if(data.result.streams.cmpinfo != null){
                 seterrorStream(data.result.streams.cmpinfo.uri);
@@ -130,6 +133,7 @@ const CodeEditor = () => {
                 seterrorStream(data.result.streams.error.uri);
               }
               setinputStream(data.result.streams.input.uri);
+              setisError(true);
             }
         }else{
           console.log("Still Execution");
@@ -354,7 +358,7 @@ const CodeEditor = () => {
         </label>
         <textarea
           id="compiler-message"
-          className="form-textarea w-full bg-gray-100 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:border-blue-300"
+          className={ isError ? "form-textarea text-red-700 w-full bg-gray-100 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:border-blue-300" : "form-textarea w-full bg-gray-100 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring focus:border-blue-300" }
           rows="4"
           value={compilerMessage}
           disabled

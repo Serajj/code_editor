@@ -1,5 +1,5 @@
 // src/components/Register.js
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import AuthHeader from './AuthHeader';
 import { signupFields } from './form/formFields';
@@ -22,6 +22,13 @@ const Register = () => {
   const handleChange = (e) => {
     setLoginState({ ...loginState, [e.target.id]: e.target.value });
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem('authenticated_token');
+    if(token){
+      navigation('/');
+    }
+  }, []);
 
  
   const handleSubmit = async(e) => {
@@ -57,16 +64,16 @@ const Register = () => {
           progress: undefined,
         });
 
-        let user = response.data.data.user;
-        let token = response.data.data.token;
-        localStorage.setItem('authenticated', JSON.stringify(user));
-        localStorage.setItem('authenticated_token', token);
-        localStorage.setItem('authenticated_role', user.role);
+        // let user = response.data.data.user;
+        // let token = response.data.data.token;
+        // localStorage.setItem('authenticated', JSON.stringify(user));
+        // localStorage.setItem('authenticated_token', token);
+        // localStorage.setItem('authenticated_role', user.role);
 
       
-        mainContext.setLoggedInUser(user);
-        mainContext.setAuthToken(token);
-        navigation("/");
+        // mainContext.setLoggedInUser(user);
+        // mainContext.setAuthToken(token);
+        navigation("/login");
 
       }else{
         console.log("Unauthorized");

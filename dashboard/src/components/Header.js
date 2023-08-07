@@ -32,10 +32,10 @@ const Header = (props) => {
   };
 
   return (
-    <header className="bg-purple-800 text-white">
+    <header className="bg-purple-800 text-white sticky top-0 z-50">
       <div className="container mx-auto py-4 px-8 md:flex md:items-center md:justify-between">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-semibold">Welcome</div>
+          <div className="text-xl font-semibold">Welcome {mainContext.loggedInUser != null ? mainContext.loggedInUser.name : ""}</div>
           <button
             className="md:hidden"
             onClick={toggleMenu}
@@ -50,6 +50,8 @@ const Header = (props) => {
         <nav className={`md:flex ${isMenuOpen ? 'hidden' : 'hidden'} mt-4 md:mt-0 md:space-x-4`}>
           {/* Add your navigation links here */}
           <a href="/" className="block text-white">Home</a>
+           {mainContext.loggedInUser && <a href={ '/chat' } className="block text-white">Chat</a>}
+            {mainContext.loggedInUser && <a href={ '/profile' } className="block text-white">Profile</a>}
           { isAdmin && <a href={ '/questions' } className="block text-white">Questions</a>}
           
           {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <a href="/login" className="block text-white">Login</a>}
@@ -60,6 +62,8 @@ const Header = (props) => {
           <nav className="mt-4 space-y-4">
             {/* Add your navigation links here */}
             <a href="/" className="block text-white">Home</a>
+            {mainContext.loggedInUser && <a href={ '/chat' } className="block text-white">Chat</a>}
+            {mainContext.loggedInUser && <a href={ '/profile' } className="block text-white">Profile</a>}
             { !isAdmin && <a href={ '/questions' } className="block text-white">Questions</a>}
             {mainContext.loggedInUser ? <a href="#" onClick={handleLogout} className="block text-white">Logout</a> : <a href="/login" className="block text-white">Login</a>}
           </nav>

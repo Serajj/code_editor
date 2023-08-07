@@ -21,6 +21,19 @@ const loginFields=[
     }
 ]
 
+const resendLinkFields=[
+    {
+        labelText:"Email address",
+        labelFor:"email",
+        id:"email",
+        name:"email",
+        type:"email",
+        autoComplete:"email",
+        isRequired:true,
+        placeholder:"Email address"   
+    }
+]
+
 const signupFields=[
     {
         labelText:"Name",
@@ -64,4 +77,4 @@ const signupFields=[
     }
 ]
 
-export {loginFields,signupFields}
+export {loginFields,signupFields,resendLinkFields}

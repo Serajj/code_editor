@@ -8,9 +8,9 @@ const Dashboard = (props) => {
   const mainContext = useContext(MainContext);
 
  
-  const userCount = 100;
-  const productCount = 250;
-  const orderCount = 50;
+  const userCount = "Comming soon...";
+  const productCount = "Comming soon...";
+  const orderCount ="Comming soon...";
 
   const navigation = useNavigate();
   useEffect(() => {
@@ -35,11 +35,11 @@ const Dashboard = (props) => {
           <p className="text-4xl font-bold">{userCount}</p>
         </div>
         <div className="bg-white shadow-md rounded-md p-4">
-          <h2 className="text-lg font-semibold">Products</h2>
+          <h2 className="text-lg font-semibold">Questions</h2>
           <p className="text-4xl font-bold">{productCount}</p>
         </div>
         <div className="bg-white shadow-md rounded-md p-4">
-          <h2 className="text-lg font-semibold">Orders</h2>
+          <h2 className="text-lg font-semibold">Solved</h2>
           <p className="text-4xl font-bold">{orderCount}</p>
         </div>
       </div>
