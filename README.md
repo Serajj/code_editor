@@ -18,7 +18,7 @@ It is developed using the sphere-engine API, and you can use it to build submiss
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://link-to-project](https://github.com/Serajj/code_editor.git
 ```
 
 Go to the project directory
