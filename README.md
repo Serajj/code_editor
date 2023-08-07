@@ -56,6 +56,8 @@ Run the server
   nodemon index.js
 ```
 
+```Note : For create admin account , first signup as a noral user then navigate to mongodb collection and change role to admin.```
+
 ### Frontend dashboard setup
 
 ```bash
@@ -89,7 +91,9 @@ Start the server
 - Admin can add coding problems.
 - Admin can add test cases to a problem
 - User can write code and submit.
-- User email verification
+- User email verification.
+- One to one chat using socket,
+- Group chat.
 
 
 ## Screenshots
